@@ -1,0 +1,236 @@
+:root {
+  --jaccBlue: #004176;
+  --jaccOrange: #f89b3a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: var(--jaccBlue);
+}
+.navItem {
+  width: 25%;
+  background-color: var(--jaccBlue);
+  color: white;
+  min-height: 3rem;
+  padding: 1rem;
+  border-right: 1px solid white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.navItem:hover {
+  background-color: var(--jaccOrange);
+  color: var(--jaccBlue);
+  min-height: 3rem;
+}
+.navItem:last-of-type {
+  border-right: none;
+}
+
+.interactiveContainer {
+  width: 90vw;
+  margin: auto;
+  margin-top: 10vh;
+  border: 1px solid #111;
+  background: #f4f4f4;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.interactiveTitles {
+  padding: 1rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: var(--jaccBlue);
+  border-bottom: 2px solid var(--jaccOrange);
+  box-shadow: inset 8px 8px 15px rgb(0 0 0 / 3%);
+  margin-bottom: 3px;
+}
+
+.interactiveTitles div:first-of-type {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.interactiveTitles div:nth-child(2) {
+  font-size: 1.2rem;
+}
+
+.split {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.leftOrTop {
+  width: 75%;
+}
+.rightOrBottom {
+  /* width: 25%;
+  background: url(../imgs/Aortic\ guideline\ static_v2temp\ 2.png) no-repeat; */
+  /* background-position: center; */
+  background-size: contain;
+}
+.rightOrBottom img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+}
+
+.topBarHeader,
+.topBarHeaderSub {
+  background-color: var(--jaccBlue);
+  height: 50px;
+  border: 1px solid rgb(3, 3, 33);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.topBarHeaderSub {
+  background-color: #1c5b8f;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: none;
+  height: 42px;
+}
+
+.topBarHeader img,
+.topBarHeaderSub img,
+.switch-label > img {
+  max-height: 20px;
+  margin-right: 1rem;
+}
+
+img.aneurysmImaging {
+  max-height: 40px;
+}
+
+.toggleSection {
+  padding-bottom: 20px;
+  min-height: 20vh;
+  background-color: lightgray;
+  color: var(--jaccBlue);
+  box-shadow: 1px 1px 10px rgb(198, 198, 198);
+  margin: 2rem;
+}
+
+.results {
+  margin: 2rem;
+  padding: 2.2rem;
+  line-height: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modalCoverOtherContent {
+  height: 100%;
+  width: 100vw;
+  background-color: rgb(255 255 255 / 90%);
+  position: absolute;
+  z-index: 10;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer > div.riskFactorsModal > p,
+.modalContainer > div.geneticsModal > p,
+.modalContainer > div.riskFactorsModal > H1,
+.modalContainer > div.geneticsModal > H1 {
+  margin-left: 5rem;
+}
+
+.geneticsModal,
+.riskFactorsModal,
+.imagingModal,
+.abbreviationsModal {
+  z-index: 100;
+  background: #f0f5ff;
+  width: 90%;
+  min-height: 35vh;
+  padding: 2rem 5rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--jaccBlue);
+  margin-bottom: 2rem;
+}
+
+.riskFactorsModal:after {
+  content: "";
+  background-image: url(../imgs//Aortic\ guideline\ static_v2temp\ 2.png);
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 200px, 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  display: block;
+  /* transform: scale(0.3); */
+  height: 100%;
+}
+
+.geneticsModal::after {
+  content: "";
+  background-image: url(../imgs/geneticsModalImg.png);
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 150px, 300px;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  left: -20px;
+  display: block;
+  /* transform: scale(0.3); */
+  height: 100%;
+}
+.modalContainer > * > p {
+  margin-bottom: 1.5rem;
+  color: var(--jaccBlue);
+}
+
+.modalContainer > * > H1 {
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--jaccBlue);
+}
+
+.closeModal {
+  width: 3rem;
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+}
+.closeModal:hover {
+  filter: saturate(2);
+}
+
+.imageTemp {
+  max-width: 70%;
+}

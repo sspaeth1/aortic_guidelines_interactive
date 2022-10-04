@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <title>Aortic Guidelines</title>
+</head>
+<body>
+
+
+    <div class="interactiveContainer">
+        <div class="interactiveTitles">
+            <div>Heritable Thoracic Aortic Disease Interactive</div>
+            <div>Evaluation and Genetic Testing Protocol for Patients With TAD</div>
+        </div>
+
+        <div id="Patient_with_TAD_1" class="toggleSection">
+            <div class="topBarHeader">
+                Patient with TAD, select appropriate:
+            </div>
+
+            <div class="toggleCircle">
+                <div class="text" cite="http://www.inspireux.com/category/quotes/jesse-james-garrett/">
+                  <p>Family History of TAD, Intracranial or Peripheral Aneurysm</p>
+                </div>
+              </div>
+
+            <div class="toggleCircle"> Family History of TAD, Intracranial or Peripheral Aneurysm</div>
+
+            <div class="toggles">
+                <label class="checker">
+                    <input class="checkbox" type="checkbox" />
+                    <div class="check-bg"></div>
+                    <div class="checkmark">
+                      <svg viewBox="0 0 100 100">
+                        <text x="0" y="15" fill="red">I love SVG!</text>
+                        <path d="M20,55 L40,75 L77,27" fill="none" stroke="#FFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </label>
+
+
+                  <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-bluetooth-b"></i><span>Features of MFS, LDS, or vEDS</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="bluetooth">
+                        <label for="bluetooth"></label>
+                    </div>
+                </div>
+
+
+                <div class="switch-holder">
+                    <div class="switch-label">
+                        <i class="fa fa-bluetooth2-b"></i><span>Family History of TAD, Intracranial or Peripheral Aneurysm</span>
+                    </div>
+                    <div class="switch-toggle">
+                        <input type="checkbox" id="bluetooth">
+                        <label for="bluetooth"></label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="geneticTesting" class="toggleSection">
+            <div class="topBarHeader">
+                Perform genetic testing on patient
+            </div>
+            <div class="toggles">
+
+            </div>
+        </div>
+
+        <div id="cascadeTesting" class="toggleSection">
+            <div class="topBarHeader">
+                Pathogenic or likely pathogenic variant identified
+            </div>
+            <div class="topBarHeaderSub">
+                <img src="./imgs/cascadeTestingIcon.svg" alt="cascade testing icon">
+                <span>Perform cascade testing on at-risk family relatives </span>
+                <a href="">
+                    <img src="./imgs/infoIcon.svg" alt="info icon">
+                </a>
+            </div>
+            <div class="toggles">
+
+            </div>
+        </div>
+
+        <div id="imagingAneurysm" class="toggleSection">
+            <div class="topBarHeader">
+                Imaging for aneurysms in at-risk family
+                <a href="">
+                    <img src="./imgs/infoIcon.svg" alt="info icon">
+                </a>
+            </div>
+            <div class="toggles">
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

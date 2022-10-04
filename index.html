@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <title>Aortic Guidelines</title>
+</head>
+<body>
+
+
+
+        <div class="modalContainer">
+            <div id="geneticsModal" class="geneticsModal hidden">
+                <img id="closeGeneticsModal" class="closeModal" src="./imgs/X_close.svg" alt="close">
+                <h1>Genetic Testing  <img src="./imgs/dna_icon.svg" alt=""></h1>
+                <p>A multigene panel comprising all genes suspected to cause HTAD is the most cost-effective and clinically useful approach to testing.  </p>
+                <p>The HTAD genetic testing panels include (at the time of this writing) 11 genes that are confirmed to confer a highly penetrant risk for TAD: FBN1, LOX, COL3A1, TGFBR1, TGFBR2, SMAD3, TGFB2, ACTA2, MYH11, MYLK, and PRKG1 19. These panels also include genes that increase the risk for TAD and/or lead to systemic features that overlap with Marfan syndrome, Loeys-Dietz syndrome, or vascular Ehlers-Danlos syndrome.</p>
+                <p>Only pathogenic or likely pathogenic variants are disease-causing and should be used for cascade genetic testing all relatives at risk for inheriting the disease-causing variant. Variants of unknown significance have not been confirmed to cause TAD and therefore should not be used either to identify which family members are at risk or to guide clinical management</p>
+
+            </div>
+
+            <div id="riskFactorsModal" class="riskFactorsModal hidden">
+                <img id="closeRiskFactorsModal" class="closeModal" src="./imgs/X_close.svg" alt="close">
+                <h1>HTAD Risk Factors</h1>
+                <p>TAD and syndromic features of Marfan, Loeys-Dietz, or vascular Ehlers-Danlos syndromes</p>
+                <p>TAD presenting at age &lt;60 years</p>
+                <p>A family history of either TAD or peripheral/intracranial aneurysms in a first- or second-degree relative</p>
+                <p>A history of unexplained sudden death at a relatively young age in a first- or second-degree relative</p>
+            </div>
+
+            <div id="abbreviationsModal" class="abbreviationsModal hidden">
+                <img id="closeAbbreviationsModal" class="closeModal" src="./imgs/X_close.svg" alt="close">
+                <h1>Abbreviations</h1>
+
+                <p>Abbreviation…..Meaning/Phrase
+
+                    MFS…Marfan syndrome
+                    LDS…Loeys-Dietz syndrome
+                    vEDS
+                    TAD…thoracic aortic disease
+                    VUS…variants of unknown significance
+                    TAAD…thoracic aortic aneurysm and dissection
+
+                    Minerva Medica.
+                        Blue (þ) indicates positive
+                        green (–), negative</p>
+            </div>
+
+            <div id="imagingModal" class="imagingModal hidden">
+                <img id="closeImagingModal" class="closeModal" src="./imgs/X_close.svg" alt="close">
+                <h1>Imaging</h1>
+                <img class="imageTemp" src="./imgs/imaging.png" alt="imaging details">
+            </div>
+
+        </div>
+
+        <div id="modalCoverOtherContent" class="modalCoverOtherContent hidden"></div>
+
+        <div></div>
+
+        <div class="interactiveContainer">
+            <div class="interactiveTitles">
+                <div>Heritable Thoracic Aortic Disease Interactive</div>
+                <div>Evaluation and Genetic Testing Protocol for Patients With TAD</div>
+            </div>
+            <div class="nav">
+                <nav class="navItem GT">Genetic Testing</nav>
+                <nav class="navItem RF">HTAD Risk Factors</nav>
+                <nav class="navItem Imaging">Imaging</nav>
+                <nav class="navItem Abbreviations">Abbreviations</nav>
+            </div>
+
+        <div class="split">
+
+            <div class="leftOrTop">
+
+                <div id="Patient_with_TAD_1" class="toggleSection">
+                    <div class="topBarHeader">
+                        Patient with TAD, select appropriate:
+                    </div>
+
+                    <div class="toggles">
+
+                          <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><span>Features of MFS, LDS, or vEDS</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_1">
+                                <label for="_1"></label>
+                            </div>
+                        </div>
+
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><span>Family History of TAD, Intracranial or Peripheral Aneurysm</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_2">
+                                <label for="_2"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><span>FTAD Patient < 60 </span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_3">
+                                <label for="_3"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><span>“Sporadic” Patient  ≥ 60</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_4">
+                                <label for="_4"></label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div id="geneticTesting" class="toggleSection hidden">
+                    <div class="topBarHeader">
+                        Perform genetic testing on patient
+
+                            <img id="geneticsInfoIcon" src="./imgs/infoIcon.svg" alt="info icon">
+
+                    </div>
+                    <div class="toggles">
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/dna_icon.svg" alt="Genetic testing icon"><span>Positive</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_5">
+                                <label for="_5"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/dna_icon.svg" alt="Genetic testing icon"><span>Negative / VUS</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_6">
+                                <label for="_6"></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="geneticTestingNegative" class="topBarHeader results hidden">
+                    Perform imaging for aortic dilation/aneurysm in at-risk family members*
+                </div>
+
+                <div id="cascadeTesting" class="toggleSection hidden">
+                    <div class="topBarHeader">
+                        Pathogenic or likely pathogenic variant identified
+                    </div>
+                    <div class="topBarHeaderSub">
+                        <span>Perform cascade testing on at-risk family relatives </span>
+                            <img id="cascadeInfoIcon_riskFactors" src="./imgs/infoIcon.svg" alt="info icon">
+                    </div>
+                    <div class="toggles">
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/cascadeTestingIcon.svg" alt="cascade icon"><span>Positive</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_7">
+                                <label for="_7"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/cascadeTestingIcon.svg" alt="cascade icon"><span>Negative</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_8">
+                                <label for="_8"></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="cascadePositive" class="topBarHeader results hidden">
+                    Test offspring <br>
+                    Repeat cascade testing on at-risk family relatives
+                </div>
+
+                <div id="cascadeNegative" class="topBarHeader results hidden">
+                    Offspring at general population risk of TAAD
+                </div>
+
+                <div id="imagingAneurysm" class="toggleSection hidden">
+                    <div class="topBarHeader">
+                        Imaging for aneurysms in at-risk family
+                            <img id="imagingInfoIcon" src="./imgs/infoIcon.svg" alt="info icon">
+                    </div>
+                    <div class="toggles">
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img class="aneurysmImaging" src="./imgs/aneurysmImaging.svg" alt="aneurysmImaging icon"><span>Positive</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_9">
+                                <label for="_9"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img class="aneurysmImaging" src="./imgs/aneurysmImaging.svg" alt="aneurysmImaging icon"><span>Negative</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_10">
+                                <label for="_10"></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="PosGeneticTesting2" class="toggleSection hidden">
+                    <div class="topBarHeader">
+                        Perform genetic testing on patient
+                        <img id="geneticsInfoIcon2" src="./imgs/infoIcon.svg" alt="info icon">
+
+                    </div>
+                    <div class="toggles">
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/dna_icon.svg" alt="Genetic testing icon"><span>Positive</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_11">
+                                <label for="_11"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/dna_icon.svg" alt="Genetic testing icon"><span>Negative / VUS</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_12">
+                                <label for="_12"></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="cascadeTesting2" class="toggleSection hidden">
+                    <div class="topBarHeader">
+                        Pathogenic or likely pathogenic variant identified
+                    </div>
+                    <div class="topBarHeaderSub">
+                        <span>Perform cascade testing on at-risk family relatives </span>
+                            <img id="cascadeInfoIcon2_riskFactors" src="./imgs/infoIcon.svg" alt="info icon">
+                    </div>
+                    <div class="toggles">
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/cascadeTestingIcon.svg" alt="cascade icon"><span>Positive</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_13">
+                                <label for="_13"></label>
+                            </div>
+                        </div>
+
+                        <div class="switch-holder">
+                            <div class="switch-label">
+                                <i class="fa none"></i><img src="./imgs/cascadeTestingIcon.svg" alt="cascade icon"><span>Negative</span>
+                            </div>
+                            <div class="switch-toggle">
+                                <input type="checkbox" id="_14">
+                                <label for="_14"></label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="cascadePositive2" class="topBarHeader results hidden">
+                    Test offspring <br>
+                    Repeat cascade testing on at-risk family relatives
+                </div>
+
+                <div id="cascadeNegative2" class="topBarHeader results hidden">
+                    Offspring at general population risk of TAAD
+                </div>
+
+            <div id="aorticDilationOrAneurysm" class="topBarHeader results hidden">
+                Aortic dilation or aneurysm
+            </div>
+
+            <div id="imagingNegative" class="topBarHeader results hidden">
+                Normal aortic diameter
+            </div>
+            <div id="geneticTestingNegative2" class="topBarHeader results hidden">
+                Perform imaging for aortic dilation/aneurysm in at-risk family members*
+            </div>
+
+
+
+
+
+            </div>
+            <div class="rightOrBottom">
+                <img src="./imgs/Aortic guideline static_v2temp 2.png" alt="">
+            </div>
+        </div>
+
+        <script>
+            const $ = function(el){
+                return document.getElementById(el)
+            }
+            //starting 4
+            const grab_1 = $('_1');
+            const grab_2 = $('_2');
+            const grab_3 = $('_3');
+            const grab_4 = $('_4');
+
+            // genetic testing
+            const grab_5 = $('_5');
+            const grab_6 = $('_6');
+
+            // cascade testing
+            const grab_7 = $('_7');
+            const grab_8 = $('_8');
+
+            // imaging aneurysms
+            const grab_9 = $('_9');
+            const grab_10 = $('_10');
+
+            // imaging pos >  genetic testing
+            const grab_11 = $('_11');
+            const grab_12 = $('_12');
+
+            // cascade testing2
+            const grab_13 = $('_13');
+            const grab_14 = $('_14');
+
+            //first three need same event handler
+            const arrGrab_firstThree = [grab_1,grab_2,grab_3]
+
+            // genetic testing was out of order so added a second one after imaging which added two new buttons which do the same as previous gentic testing. will then add for each to add same onclick handler
+            const arrGeneticPos = [grab_5, grab_11]
+            const arrGeneticNeg = [grab_6, grab_12]
+
+
+
+            const grabGeneticTesting = $('geneticTesting')
+            const grabCascadeTesting = $('cascadeTesting')
+            const grabImagingAneurysm = document.getElementById('imagingAneurysm')
+            const grabAorticDilationOrAneurysm = document.getElementById('aorticDilationOrAneurysm')
+            const grabCascadePositive = $('cascadePositive')
+            const grabCascadeNegative = $('cascadeNegative')
+            const grabGeneticTestingNegative = $('geneticTestingNegative')
+            const grabImagingNegative = $('imagingNegative')
+            const grabPosGeneticTesting2 = $('PosGeneticTesting2')
+            const grabGeneticTestingNegative2 = $('geneticTestingNegative2')
+
+            const grabCascadeTesting2 = $('cascadeTesting2')
+            const grabCascadePositive2 = $('cascadePositive2')
+            const grabCascadeNegative2 = $('cascadeNegative2')
+
+
+
+
+            const arrAllToggleChecks = [grab_1,grab_2,grab_3,grab_4,grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
+            const arrSelectionScrollToBottom = [grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
+            const arrAllNodesToHideForReset = [
+                                                grabCascadeTesting,
+                                                grabImagingAneurysm,
+                                                grabAorticDilationOrAneurysm,
+                                                grabCascadePositive,
+                                                grabCascadeNegative,
+                                                grabGeneticTestingNegative,
+                                                grabImagingNegative,
+                                                grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2
+                                              ]
+            const arrAllNodesPassedGeneticPos = [
+
+                                                grabImagingAneurysm,
+                                                grabAorticDilationOrAneurysm,
+                                                grabCascadePositive,
+                                                grabCascadeNegative,
+                                                grabGeneticTestingNegative,
+                                                grabImagingNegative,
+                                                grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2
+                                                ]
+
+            const arrAllNodesPassedGeneticNeg = [
+                                                grabCascadeTesting,
+                                                grabImagingAneurysm,
+                                                grabAorticDilationOrAneurysm,
+                                                grabCascadePositive,
+                                                grabCascadeNegative,
+                                                grabGeneticTestingNegative,
+                                                grabImagingNegative,
+                                                grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2                                                ]
+            const arrAllNodesPassedCascadePos = [
+                                                grabImagingAneurysm,
+                                                grabAorticDilationOrAneurysm,
+                                                grabCascadeNegative,
+                                                grabGeneticTestingNegative,
+                                                grabImagingNegative,
+                                                grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2                                                ]
+            const arrAllNodesPassedCascadeNeg = [
+                                                grabImagingAneurysm,
+                                                grabAorticDilationOrAneurysm,
+                                                grabCascadePositive,
+                                                grabGeneticTestingNegative,
+                                                grabImagingNegative,
+                                                grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2                                                ]
+            const arrAllNodesPassedImaging = [
+                                                // grabImagingNegative,
+                                                // grabPosGeneticTesting2,
+                                                grabCascadeTesting2,
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2
+            ]
+            const arrAllNodesGenetics2 = [
+                                                grabCascadePositive2,
+                                                grabCascadeNegative2
+            ]
+
+            const arrGeneticsSubs = [grabCascadeTesting, grabImagingAneurysm,grabAorticDilationOrAneurysm]
+
+
+            const checkIfHidden = (el)=>{
+                let arr = document.getElementById(el).classList;
+                for (item of arr){
+                    if(item === "hidden"){
+                        return true
+                    }
+                }
+            }
+
+            // Hide all sub sections
+            hideSubsections=(arrToHide)=>{
+                arrToHide.forEach( node =>{
+                    node.classList.contains('hidden')? "": node.classList.add('hidden')
+                })
+            }
+
+            //uncheck all others
+             uncheckOthers=(el, selectArr)=>{
+                //  console.log(el.target.id)
+                //  console.log(el.path[0].id)
+
+                let arrOtherToggleChecks = selectArr.filter( (v)=>{
+                if(v.id  != el.target.id)
+                    return v
+                })
+                arrOtherToggleChecks.forEach( input =>{ input.checked = false})
+            }
+
+            //scroll to bottom
+            scrollTobottom =(el)=>{
+                arrSelectionScrollToBottom.forEach( check =>{
+                    check.nextElementSibling.addEventListener('click', ()=>{
+                    window.scrollTo(0, window.scrollY+200); //(0,document.body.scrollHeight);
+                    })
+                })
+            }
+            scrollTobottom()
+
+        arrGrab_firstThree.forEach( grabButton =>{
+                grabButton.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesToHideForReset)
+                uncheckOthers(el, arrAllToggleChecks)
+                grabGeneticTesting.dataset.visible = true
+                    grab_1.checked? grabGeneticTesting.classList.add('hidden'): ""
+                    grab_2.checked? grabGeneticTesting.classList.add('hidden'): ""
+                    grab_3.checked? grabGeneticTesting.classList.add('hidden'): ""
+                        checkIfHidden('geneticTesting')? grabGeneticTesting.classList.remove('hidden'): grabGeneticTesting.classList.add('hidden');
+               })
+            })
+
+            // sporatic patient > imaging Aneurysm
+            grab_4.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesToHideForReset)
+                checkIfHidden('imagingAneurysm')? grabImagingAneurysm.classList.remove('hidden') : grabImagingAneurysm.classList.add('hidden') ;
+                checkIfHidden('geneticTesting')? "" : grabGeneticTesting.classList.add('hidden');
+                uncheckOthers(el, arrAllToggleChecks)
+            })
+
+            //  Genetic Testing pos > cascade testing
+            grab_5.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesPassedGeneticPos)
+                checkIfHidden('cascadeTesting')? grabCascadeTesting.classList.remove('hidden') : grabCascadeTesting.classList.add('hidden') ;
+                uncheckOthers(el, [grab_6, grab_7, grab_8, grab_9, grab_10, grab_11, grab_12, grab_13, grab_14])
+            })
+
+
+            // Genetic Testing Neg > text
+            grab_6.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesPassedGeneticNeg)
+                checkIfHidden('geneticTestingNegative')? grabGeneticTestingNegative.classList.remove('hidden') : grabGeneticTestingNegative.classList.add('hidden') ;
+                uncheckOthers(el, [grab_5, grab_7, grab_8, grab_9, grab_10, grab_11, grab_12, grab_13, grab_14])
+            })
+
+            //cascade testing positive
+            grab_7.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesPassedCascadePos)
+                checkIfHidden('cascadePositive')? grabCascadePositive.classList.remove('hidden') : grabCascadePositive.classList.add('hidden') ;
+                uncheckOthers(el, [grab_8])
+
+            })
+
+            //cascade testing negative
+            grab_8.addEventListener('click', (el)=>{
+                hideSubsections(arrAllNodesPassedCascadeNeg)
+                checkIfHidden('cascadeNegative')? grabCascadeNegative.classList.remove('hidden') : grabCascadeNegative.classList.add('hidden') ;
+                uncheckOthers(el, [grab_7])
+
+            })
+
+            //imaging positive
+            grab_9.addEventListener('click', (el)=>{
+                hideSubsections([ grabCascadeTesting2,grabImagingNegative, grabGeneticTestingNegative2, grabCascadePositive2,grabCascadeNegative2])
+                uncheckOthers(el, [grab_10, grab_11, grab_12, grab_13, grab_14])
+                checkIfHidden('PosGeneticTesting2')? grabPosGeneticTesting2.classList.remove('hidden') : grabPosGeneticTesting2.classList.add('hidden') ;
+            })
+
+            //imaging negative
+            grab_10.addEventListener('click', (el)=>{
+                hideSubsections([grabPosGeneticTesting2,grabGeneticTestingNegative2, grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
+                uncheckOthers(el, [grab_9,grab_10, grab_11, grab_12, grab_13, grab_14])
+                checkIfHidden('imagingNegative')? grabImagingNegative.classList.remove('hidden') : grabImagingNegative.classList.add('hidden') ;
+            })
+
+            console.log(arrAllNodesToHideForReset[1].id)
+            // arrAllNodesToHideForReset.split(arrAllNodesToHideForReset.indexOf[grabImagingNegative])[1]
+
+            // Imaging Aneurysm Positive > Genetic Testing Pos 2
+            grab_11.addEventListener('click', (el)=>{
+                hideSubsections([ grabGeneticTestingNegative2, grabImagingNegative,grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
+                uncheckOthers(el, [grab_12, grab_13, grab_14])
+                checkIfHidden('cascadeTesting2')? grabCascadeTesting2.classList.remove('hidden') : grabCascadeTesting2.classList.add('hidden') ;
+            })
+            // Imaging Aneurysm Negative > Genetic Testing Neg 2
+            grab_12.addEventListener('click', (el)=>{
+                hideSubsections([grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
+                uncheckOthers(el, [grab_11,grab_13, grab_14])
+                checkIfHidden('geneticTestingNegative2')? grabGeneticTestingNegative2.classList.remove('hidden') : grabGeneticTestingNegative2.classList.add('hidden') ;
+            })
+
+            //cascade testing > cascade testing pos 2
+            grab_13.addEventListener('click', (el)=>{
+                hideSubsections([grabCascadeNegative2])
+                uncheckOthers(el, [grab_14])
+                checkIfHidden('cascadePositive2')? grabCascadePositive2.classList.remove('hidden') : grabCascadePositive2.classList.add('hidden') ;
+            })
+
+            //cascade testing > cascade testing neg 2
+            grab_14.addEventListener('click', (el)=>{
+                hideSubsections([grabCascadePositive2])
+                uncheckOthers(el, [grab_13])
+                checkIfHidden('cascadeNegative2')? grabCascadeNegative2.classList.remove('hidden') : grabCascadeNegative2.classList.add('hidden') ;
+            })
+
+
+            //MODALS
+
+                //grab modals
+            const grabGeneticsModal = $('geneticsModal')
+            const grabRiskFactorsModal = $('riskFactorsModal')
+            const grabImagingModal = $('imagingModal')
+            const grabAbbreviationsModal = $('abbreviationsModal')
+
+            const arrAllModals = [grabGeneticsModal,grabRiskFactorsModal,grabImagingModal,grabAbbreviationsModal]
+
+                //grab info open icons
+            const grabGeneticsInfoIcon = $('geneticsInfoIcon');
+            const grabcascadeInfoIcon_riskFactors = $('cascadeInfoIcon_riskFactors');
+            const grabImagingInfoIconModal = $('imagingInfoIcon');
+            const grabGeneticsInfoIcon2 = $('geneticsInfoIcon2');
+            const grabCascadeInfoIcon2_riskFactors = $('cascadeInfoIcon2_riskFactors');
+
+
+                //grab close icons
+            const grabCloseGeneticsModal = $('closeGeneticsModal');
+            const grabCloseRiskFactorsModal = $('closeRiskFactorsModal');
+            const grabCloseImagingModal = $('closeImagingModal');
+            const grabCloseAbbreviationsModal = $('closeAbbreviationsModal')
+
+
+            const grabNavGeneticFactor = document.querySelector('.navItem.GT')
+            const grabNavRiskFactor = document.querySelector('.navItem.RF')
+            const grabNavImaging = document.querySelector('.navItem.Imaging')
+            const grabNavAbbreviations = document.querySelector('.navItem.Abbreviations')
+
+            const grabModalCoverOtherContent = $('modalCoverOtherContent')
+
+
+            removeModelCoverAndScrollToBottom =()=>{
+                checkIfHidden('modalCoverOtherContent')? grabModalCoverOtherContent.classList.remove('hidden') : grabModalCoverOtherContent.classList.add('hidden') ;
+                window.scrollTo(0,document.body.scrollHeight);
+             }
+             addModelCoverAndScrollToTop =()=>{
+                checkIfHidden('modalCoverOtherContent')? grabModalCoverOtherContent.classList.remove('hidden') : grabModalCoverOtherContent.classList.add('hidden') ;
+                window.scrollTo(0,0);
+             }
+
+                //nav buttons open modals
+            grabNavGeneticFactor.addEventListener('click', ()=>{
+                closeAllModals()
+                grabGeneticsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+            })
+            grabNavRiskFactor.addEventListener('click', ()=>{
+                closeAllModals()
+                grabRiskFactorsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+             grabNavImaging.addEventListener('click', ()=>{
+                closeAllModals()
+                grabImagingModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+             grabNavAbbreviations.addEventListener('click', ()=>{
+                closeAllModals()
+                grabAbbreviationsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+
+
+                //info buttons open modals
+            grabGeneticsInfoIcon.addEventListener('click', ()=>{
+                closeAllModals()
+                grabGeneticsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+            })
+            grabcascadeInfoIcon_riskFactors.addEventListener('click', ()=>{
+                closeAllModals()
+                grabRiskFactorsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+             grabImagingInfoIconModal.addEventListener('click', ()=>{
+                closeAllModals()
+                grabImagingModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+             grabGeneticsInfoIcon2.addEventListener('click', ()=>{
+                closeAllModals()
+                grabGeneticsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+             grabCascadeInfoIcon2_riskFactors.addEventListener('click', ()=>{
+                closeAllModals()
+                grabRiskFactorsModal.classList.remove('hidden')
+                addModelCoverAndScrollToTop()
+             })
+
+             // close modals
+             grabCloseGeneticsModal.addEventListener('click', ()=>{
+                removeModelCoverAndScrollToBottom();
+                grabGeneticsModal.classList.add('hidden')
+            })
+            grabCloseRiskFactorsModal.addEventListener('click', ()=>{
+                removeModelCoverAndScrollToBottom();
+                window.scrollTo(0,document.body.scrollHeight);
+                grabRiskFactorsModal.classList.add('hidden')
+             })
+             grabCloseImagingModal.addEventListener('click', ()=>{
+                removeModelCoverAndScrollToBottom();
+                grabImagingModal.classList.add('hidden')
+             })
+             grabCloseAbbreviationsModal.addEventListener('click', ()=>{
+                removeModelCoverAndScrollToBottom();
+                grabAbbreviationsModal.classList.add('hidden')
+             })
+
+             //close all modal before opening one
+             closeAllModals =()=>{
+                arrAllModals.forEach(modal =>{ modal.classList.contains('hidden')? "": modal.classList.add('hidden')})
+             }
+        </script>
+
+
+
+
+    </div>
+</body>
+</html>
