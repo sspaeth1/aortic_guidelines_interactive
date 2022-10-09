@@ -495,6 +495,18 @@
                 arrOtherToggleChecks.forEach( input =>{ input.checked = false})
             }
 
+            //add data-latest and remove from others
+            const selectLeftOrTopChildren = document.querySelector('.leftOrTop').children;
+
+            setLatest=(a)=>{
+                for (el of selectLeftOrTopChildren){
+                    el.classList.contains('latest') ? el.classList.remove('latest'):'';
+                }
+                a.classList.add('latest')
+            }
+
+
+
             //scroll to bottom
             scrollTobottom =(el)=>{
                 arrSelectionScrollToBottom.forEach( check =>{
@@ -514,6 +526,7 @@
                     grab_2.checked? grabGeneticTesting.classList.add('hidden'): ""
                     grab_3.checked? grabGeneticTesting.classList.add('hidden'): ""
                         checkIfHidden('geneticTesting')? grabGeneticTesting.classList.remove('hidden'): grabGeneticTesting.classList.add('hidden');
+                        setLatest(geneticTesting)
                })
             })
 
@@ -531,6 +544,7 @@
                 hideSubsections(arrAllNodesToHideForReset)
                 checkIfHidden('imagingAneurysm')? grabImagingAneurysm.classList.remove('hidden') : grabImagingAneurysm.classList.add('hidden') ;
                 checkIfHidden('geneticTesting')? "" : grabGeneticTesting.classList.add('hidden');
+                setLatest(grabImagingAneurysm)
                 uncheckOthers(el, arrAllToggleChecks)
             })
 
@@ -538,6 +552,7 @@
             grab_5.addEventListener('click', (el)=>{
                 hideSubsections(arrAllNodesPassedGeneticPos)
                 checkIfHidden('cascadeTesting')? grabCascadeTesting.classList.remove('hidden') : grabCascadeTesting.classList.add('hidden') ;
+                setLatest(grabCascadeTesting)
                 uncheckOthers(el, [grab_6, grab_7, grab_8, grab_9, grab_10, grab_11, grab_12, grab_13, grab_14])
             })
 
@@ -546,6 +561,7 @@
             grab_6.addEventListener('click', (el)=>{
                 hideSubsections(arrAllNodesPassedGeneticNeg)
                 checkIfHidden('geneticTestingNegative')? grabGeneticTestingNegative.classList.remove('hidden') : grabGeneticTestingNegative.classList.add('hidden') ;
+                setLatest(grabGeneticTestingNegative)
                 uncheckOthers(el, [grab_5, grab_7, grab_8, grab_9, grab_10, grab_11, grab_12, grab_13, grab_14])
             })
 
@@ -553,6 +569,7 @@
             grab_7.addEventListener('click', (el)=>{
                 hideSubsections(arrAllNodesPassedCascadePos)
                 checkIfHidden('cascadePositive')? grabCascadePositive.classList.remove('hidden') : grabCascadePositive.classList.add('hidden') ;
+                setLatest(grabCascadePositive)
                 uncheckOthers(el, [grab_8])
 
             })
@@ -561,6 +578,7 @@
             grab_8.addEventListener('click', (el)=>{
                 hideSubsections(arrAllNodesPassedCascadeNeg)
                 checkIfHidden('cascadeNegative')? grabCascadeNegative.classList.remove('hidden') : grabCascadeNegative.classList.add('hidden') ;
+                setLatest(grabCascadeNegative)
                 uncheckOthers(el, [grab_7])
 
             })
@@ -570,6 +588,7 @@
                 hideSubsections([ grabCascadeTesting2,grabImagingNegative, grabGeneticTestingNegative2, grabCascadePositive2,grabCascadeNegative2])
                 uncheckOthers(el, [grab_10, grab_11, grab_12, grab_13, grab_14])
                 checkIfHidden('PosGeneticTesting2')? grabPosGeneticTesting2.classList.remove('hidden') : grabPosGeneticTesting2.classList.add('hidden') ;
+                setLatest(grabPosGeneticTesting2)
             })
 
             //imaging negative
@@ -577,6 +596,7 @@
                 hideSubsections([grabPosGeneticTesting2,grabGeneticTestingNegative2, grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
                 uncheckOthers(el, [grab_9,grab_10, grab_11, grab_12, grab_13, grab_14])
                 checkIfHidden('imagingNegative')? grabImagingNegative.classList.remove('hidden') : grabImagingNegative.classList.add('hidden') ;
+                setLatest(grabImagingNegative)
             })
 
             console.log(arrAllNodesToHideForReset[1].id)
@@ -587,12 +607,14 @@
                 hideSubsections([ grabGeneticTestingNegative2, grabImagingNegative,grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
                 uncheckOthers(el, [grab_12, grab_13, grab_14])
                 checkIfHidden('cascadeTesting2')? grabCascadeTesting2.classList.remove('hidden') : grabCascadeTesting2.classList.add('hidden') ;
+                setLatest(grabCascadeTesting2)
             })
             // Imaging Aneurysm Negative > Genetic Testing Neg 2
             grab_12.addEventListener('click', (el)=>{
                 hideSubsections([grabCascadeTesting2,grabCascadePositive2,grabCascadeNegative2])
                 uncheckOthers(el, [grab_11,grab_13, grab_14])
                 checkIfHidden('geneticTestingNegative2')? grabGeneticTestingNegative2.classList.remove('hidden') : grabGeneticTestingNegative2.classList.add('hidden') ;
+                setLatest(grabGeneticTestingNegative2)
             })
 
             //cascade testing > cascade testing pos 2
@@ -600,6 +622,7 @@
                 hideSubsections([grabCascadeNegative2])
                 uncheckOthers(el, [grab_14])
                 checkIfHidden('cascadePositive2')? grabCascadePositive2.classList.remove('hidden') : grabCascadePositive2.classList.add('hidden') ;
+                setLatest(grabCascadePositive2)
             })
 
             //cascade testing > cascade testing neg 2
@@ -607,6 +630,7 @@
                 hideSubsections([grabCascadePositive2])
                 uncheckOthers(el, [grab_13])
                 checkIfHidden('cascadeNegative2')? grabCascadeNegative2.classList.remove('hidden') : grabCascadeNegative2.classList.add('hidden') ;
+                setLatest(grabCascadeNegative2)
             })
 
 
