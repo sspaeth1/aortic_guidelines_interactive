@@ -392,7 +392,7 @@
 
             const arrAllToggleChecks = [grab_1,grab_2,grab_3,grab_4,grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
             const arrAllTogglePassed3 = [grab_4,grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
-            const arrSelectionScrollToBottom = [grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
+            const arrSelectionScrollToBottom = [grab_1,grab_2,grab_3,grab_4,grab_5,grab_6,grab_7,grab_8,grab_9,grab_10,grab_11, grab_12, grab_13, grab_14]
             const arrAllNodesToHideForReset = [
                                                 grabCascadeTesting,
                                                 grabImagingAneurysm,
@@ -510,8 +510,9 @@
             //scroll to bottom
             scrollTobottom =(el)=>{
                 arrSelectionScrollToBottom.forEach( check =>{
-                    check.nextElementSibling.addEventListener('click', ()=>{
-                    window.scrollTo(0, window.scrollY+200); //(0,document.body.scrollHeight);
+                    console.log(check.parentElement.parentElement)
+                    check.parentElement.parentElement.addEventListener('click', ()=>{
+                    window.scrollTo(0,document.body.scrollHeight); //(0,document.body.scrollHeight);
                     })
                 })
             }
