@@ -121,6 +121,12 @@ html {
   height: 42px;
 }
 
+.switch-label {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
 .topBarHeader img,
 .topBarHeaderSub img,
 .switch-label > img {
@@ -240,4 +246,25 @@ img.aneurysmImaging {
 
 .imageTemp {
   max-width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .leftOrTop {
+    width: 100%;
+  }
+  .split {
+    flex-flow: column;
+  }
+  .rightOrBottom {
+    width: 100%;
+  }
+  .rightOrBottom img {
+    width: 65vw;
+  }
+  .toggleSection {
+    margin: 0.5rem;
+  }
+  .switch-label {
+    margin-right: 3px;
+  }
 }
